@@ -1,0 +1,32 @@
+{
+  "name": "doc-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "remotion studio src/index.ts",
+    "build": "remotion render src/index.ts Documentary out/video.mp4",
+    "generate": "tsx scripts/generate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "@remotion/cli": "^4.0.476",
+    "d3": "^7.9.0",
+    "dotenv": "^17.4.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "^4.0.476"
+  }
+}

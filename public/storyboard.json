@@ -1,0 +1,194 @@
+{
+  "id": "sb-roman-fall-001",
+  "channelId": "vox-like-history-channel",
+  "topic": "The Fall of the Roman Empire",
+  "thesis": "The Fall of Rome wasn't a single catastrophic event, but a complex, centuries-long unraveling driven by internal strife, economic collapse, and relentless external pressures, leaving a profound and lasting legacy on Western civilization.",
+  "scenes": [
+    {
+      "id": "scene-01",
+      "narration": "For centuries, the Roman Empire stood as an unparalleled colossus, a beacon of power and innovation. But even the mightiest empires can crumble. The story of Rome's fall isn't a simple tale of invasion, but a intricate web of internal decay and external pressures that reshaped the world.",
+      "onScreenText": "The End of an Empire?",
+      "visual": {
+        "type": "titleCard",
+        "directive": "{\"title\": \"The Fall of Rome\", \"subtitle\": \"More Than Just Barbarians at the Gates\"}"
+      },
+      "sources": [
+        {
+          "claim": "The Roman Empire was a dominant power for centuries.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Roman_Empire"
+        }
+      ],
+      "durationMs": 7000
+    },
+    {
+      "id": "scene-02",
+      "narration": "Imagine a government in constant chaos: over 20 emperors in 75 years during the 3rd century crisis alone! This political instability crippled administration, fueled civil wars, and plunged the economy into hyperinflation, debasing coinage and eroding public trust.",
+      "visual": {
+        "type": "archiveMontage",
+        "directive": "{}",
+        "assets": [
+          {
+            "ref": "https://images.pexels.com/photos/164010/pexels-photo-164010.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "CC BY-SA 3.0",
+              "attributionRequired": true,
+              "attributionText": "Caracalla bust, Glyptothek Munich"
+            }
+          },
+          {
+            "ref": "https://images.pexels.com/photos/1612461/pexels-photo-1612461.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "CC BY-SA 3.0",
+              "attributionRequired": true,
+              "attributionText": "Coinage of Diocletian"
+            }
+          },
+          {
+            "ref": "https://images.pexels.com/photos/378276/pexels-photo-378276.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "CC BY-SA 4.0",
+              "attributionRequired": true,
+              "attributionText": "Roman Aqueduct, Segovia"
+            }
+          }
+        ]
+      },
+      "sources": [
+        {
+          "claim": "The Crisis of the Third Century saw frequent changes in emperors.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
+        },
+        {
+          "claim": "Inflation and debasement of coinage were significant economic problems.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Roman_currency"
+        }
+      ],
+      "durationMs": 8000
+    },
+    {
+      "id": "scene-03",
+      "narration": "But internal weakness invited external threats. From the Goths crossing the Danube seeking refuge, to the Vandals sacking Rome itself, and the terrifying Huns pushing tribes westward – Rome's borders were under relentless assault. The empire was stretched too thin, its legions overextended.",
+      "visual": {
+        "type": "map",
+        "directive": "{\"locations\": [{\"lat\": 44.0, \"lng\": 28.0, \"label\": \"Goths cross Danube (376 AD)\"}, {\"lat\": 41.9, \"lng\": 12.5, \"label\": \"Sack of Rome (410 AD)\"}, {\"lat\": 48.0, \"lng\": 18.0, \"label\": \"Huns advance\"}]}"
+      },
+      "sources": [
+        {
+          "claim": "Goths crossed the Danube in 376 AD.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gothic_War_(376%E2%80%93382)"
+        },
+        {
+          "claim": "The Vandals sacked Rome in 455 AD.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sack_of_Rome_(455)"
+        }
+      ],
+      "durationMs": 8000
+    },
+    {
+      "id": "scene-04",
+      "narration": "The sheer scale of the empire made it ungovernable. Emperor Diocletian first split it, then Constantine moved the capital to Constantinople. While the Western Roman Empire buckled under pressure, the Eastern, Byzantine Empire, with its wealth and strategic location, would endure for another thousand years, a stark contrast to the West's rapid decline.",
+      "visual": {
+        "type": "timeline",
+        "directive": "{\"events\": [{\"year\": \"285 AD\", \"title\": \"Diocletian splits empire\"}, {\"year\": \"330 AD\", \"title\": \"Constantinople founded\"}, {\"year\": \"395 AD\", \"title\": \"Permanent East-West split\"}]}"
+      },
+      "sources": [
+        {
+          "claim": "Diocletian divided the Roman Empire.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Diocletian"
+        },
+        {
+          "claim": "Constantine founded Constantinople as the new capital.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Constantinople"
+        }
+      ],
+      "durationMs": 8000
+    },
+    {
+      "id": "scene-05",
+      "narration": "The year 410 AD. Alaric's Visigoths breached the seemingly impregnable walls of Rome, plundering the Eternal City. This wasn't the final blow, but a profound psychological shock, shattering the illusion of Roman invincibility and signaling a new, brutal reality.",
+      "visual": {
+        "type": "quoteCard",
+        "directive": "{\"quote\": \"My voice sticks in my throat, and as I dictate, sobs choke my words. The City which had taken the whole world, was itself taken.\", \"author\": \"Saint Jerome\", \"context\": \"Letter 127, reacting to the Sack of Rome (410 AD)\"}"
+      },
+      "sources": [
+        {
+          "claim": "The Visigoths under Alaric sacked Rome in 410 AD.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)"
+        },
+        {
+          "claim": "Saint Jerome's quote on the sack of Rome.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Saint_Jerome"
+        }
+      ],
+      "durationMs": 7000
+    },
+    {
+      "id": "scene-06",
+      "narration": "Finally, in 476 AD, the last Western Roman Emperor, Romulus Augustulus, was deposed by the Germanic chieftain Odoacer. But this wasn't an explosion, more a whimper. The empire had long since fractured, its power diffused among various barbarian kingdoms. The date simply solidified a reality already in motion.",
+      "visual": {
+        "type": "stat",
+        "directive": "{\"value\": 476, \"prefix\": \"AD\", \"suffix\": \"\", \"label\": \"Deposition of Romulus Augustulus\"}"
+      },
+      "sources": [
+        {
+          "claim": "Romulus Augustulus was deposed in 476 AD by Odoacer.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Romulus_Augustulus"
+        }
+      ],
+      "durationMs": 7000
+    },
+    {
+      "id": "scene-07",
+      "narration": "Yet, Rome never truly died. Its legacy permeates our laws, languages, architecture, and political thought. The 'fall' was a transformation, not an annihilation, laying the groundwork for medieval Europe and shaping the modern world in ways we still feel today. The ghost of Rome continues to inspire, warn, and fascinate.",
+      "visual": {
+        "type": "archiveMontage",
+        "directive": "{}",
+        "assets": [
+          {
+            "ref": "https://images.pexels.com/photos/1004584/pexels-photo-1004584.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "CC BY-SA 4.0",
+              "attributionRequired": true,
+              "attributionText": "Roman Forum from Capitoline Hill"
+            }
+          },
+          {
+            "ref": "https://images.pexels.com/photos/1488515/pexels-photo-1488515.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "Public Domain",
+              "attributionRequired": false
+            }
+          },
+          {
+            "ref": "https://images.pexels.com/photos/208536/pexels-photo-208536.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "kind": "image",
+            "source": "wikimedia",
+            "license": {
+              "type": "CC BY-SA 2.0",
+              "attributionRequired": true,
+              "attributionText": "Westminster Abbey (Romanesque influence)"
+            }
+          }
+        ]
+      },
+      "sources": [
+        {
+          "claim": "Roman law, language, and architecture heavily influenced subsequent European development.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Legacy_of_the_Roman_Empire"
+        }
+      ],
+      "durationMs": 8000
+    }
+  ],
+  "status": "draft"
+}
