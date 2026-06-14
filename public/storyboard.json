@@ -1,193 +1,173 @@
 {
-  "id": "sb-roman-fall-001",
-  "channelId": "vox-like-history-channel",
-  "topic": "The Fall of the Roman Empire",
-  "thesis": "The Fall of Rome wasn't a single catastrophic event, but a complex, centuries-long unraveling driven by internal strife, economic collapse, and relentless external pressures, leaving a profound and lasting legacy on Western civilization.",
+  "id": "internet-history-60s",
+  "channelId": "documentary-channel-alpha",
+  "topic": "The History of the Internet",
+  "thesis": "From military research to a global public utility, the internet's rapid evolution has fundamentally reshaped human connection, information access, and society itself.",
   "scenes": [
     {
       "id": "scene-01",
-      "narration": "For centuries, the Roman Empire stood as an unparalleled colossus, a beacon of power and innovation. But even the mightiest empires can crumble. The story of Rome's fall isn't a simple tale of invasion, but a intricate web of internal decay and external pressures that reshaped the world.",
-      "onScreenText": "The End of an Empire?",
+      "narration": "In just a few decades, a radical idea born in the shadows of the Cold War transformed into the neural network of our planet. This is the lightning-fast story of how the internet became everything.",
+      "onScreenText": "The Internet: Everything, Everywhere, All At Once",
       "visual": {
         "type": "titleCard",
-        "directive": "{\"title\": \"The Fall of Rome\", \"subtitle\": \"More Than Just Barbarians at the Gates\"}"
+        "directive": "{\"title\": \"The Internet\", \"subtitle\": \"A Global Revolution\"}"
       },
       "sources": [
         {
-          "claim": "The Roman Empire was a dominant power for centuries.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Roman_Empire"
+          "claim": "The internet's origins trace back to Cold War era research.",
+          "sourceUrl": "https://www.history.com/topics/inventions/history-of-the-internet"
         }
       ],
       "durationMs": 7000
     },
     {
       "id": "scene-02",
-      "narration": "Imagine a government in constant chaos: over 20 emperors in 75 years during the 3rd century crisis alone! This political instability crippled administration, fueled civil wars, and plunged the economy into hyperinflation, debasing coinage and eroding public trust.",
+      "narration": "Our journey begins in 1969. The U.S. Department of Defense launched ARPANET, a groundbreaking network designed to connect research institutions. Its core innovation? Packet switching, a resilient way to send data.",
+      "onScreenText": "1969: ARPANET is Born",
+      "visual": {
+        "type": "timeline",
+        "directive": "{\"events\": [{\"year\": \"1969\", \"title\": \"ARPANET goes live\"}, {\"year\": \"1971\", \"title\": \"First email sent\"}, {\"year\": \"1974\", \"title\": \"TCP/IP concept emerges\"}]}"
+      },
+      "sources": [
+        {
+          "claim": "ARPANET was launched in 1969 by the DoD.",
+          "sourceUrl": "https://www.britannica.com/technology/ARPANET"
+        },
+        {
+          "claim": "Packet switching was a key innovation.",
+          "sourceUrl": "https://www.www.internetsociety.org/internet/history-internet/brief-history-internet/"
+        }
+      ],
+      "durationMs": 7000
+    },
+    {
+      "id": "scene-03",
+      "narration": "What started as a modest network linking just four nodes across the American Southwest quickly expanded. UCLA, Stanford, UCSB, and the University of Utah: these were the first digital crossroads.",
+      "onScreenText": "Connecting the First Nodes",
+      "visual": {
+        "type": "map",
+        "directive": "{\"locations\": [{\"lat\": 34.0689, \"lng\": -118.4452, \"label\": \"UCLA\"}, {\"lat\": 37.4241, \"lng\": -122.1661, \"label\": \"Stanford Research Institute\"}, {\"lat\": 34.4140, \"lng\": -119.8489, \"label\": \"UC Santa Barbara\"}, {\"lat\": 40.7608, \"lng\": -111.8910, \"label\": \"University of Utah\"}]}"
+      },
+      "sources": [
+        {
+          "claim": "The first four ARPANET nodes.",
+          "sourceUrl": "https://www.computerhistory.org/internethistory/1960s/"
+        }
+      ],
+      "durationMs": 6500
+    },
+    {
+      "id": "scene-04",
+      "narration": "Pioneers like Vint Cerf and Bob Kahn developed TCP/IP, the foundational protocols that allowed disparate networks to communicate, birthing the 'internet' as we know it. This was the true global handshake.",
+      "onScreenText": "The Architects of Connection",
       "visual": {
         "type": "archiveMontage",
         "directive": "{}",
         "assets": [
           {
-            "ref": "https://images.pexels.com/photos/164010/pexels-photo-164010.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "ref": "https://images.pexels.com/photos/1723871/pexels-photo-1723871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "kind": "image",
-            "source": "wikimedia",
+            "source": "pexels",
             "license": {
-              "type": "CC BY-SA 3.0",
-              "attributionRequired": true,
-              "attributionText": "Caracalla bust, Glyptothek Munich"
+              "type": "Pexels License",
+              "attributionRequired": false
             }
           },
           {
-            "ref": "https://images.pexels.com/photos/1612461/pexels-photo-1612461.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "ref": "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "kind": "image",
-            "source": "wikimedia",
+            "source": "pexels",
             "license": {
-              "type": "CC BY-SA 3.0",
-              "attributionRequired": true,
-              "attributionText": "Coinage of Diocletian"
+              "type": "Pexels License",
+              "attributionRequired": false
             }
           },
           {
-            "ref": "https://images.pexels.com/photos/378276/pexels-photo-378276.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "ref": "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "kind": "image",
-            "source": "wikimedia",
+            "source": "pexels",
             "license": {
-              "type": "CC BY-SA 4.0",
-              "attributionRequired": true,
-              "attributionText": "Roman Aqueduct, Segovia"
+              "type": "Pexels License",
+              "attributionRequired": false
             }
           }
         ]
       },
       "sources": [
         {
-          "claim": "The Crisis of the Third Century saw frequent changes in emperors.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
-        },
-        {
-          "claim": "Inflation and debasement of coinage were significant economic problems.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Roman_currency"
+          "claim": "Vint Cerf and Bob Kahn developed TCP/IP.",
+          "sourceUrl": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
         }
       ],
-      "durationMs": 8000
-    },
-    {
-      "id": "scene-03",
-      "narration": "But internal weakness invited external threats. From the Goths crossing the Danube seeking refuge, to the Vandals sacking Rome itself, and the terrifying Huns pushing tribes westward – Rome's borders were under relentless assault. The empire was stretched too thin, its legions overextended.",
-      "visual": {
-        "type": "map",
-        "directive": "{\"locations\": [{\"lat\": 44.0, \"lng\": 28.0, \"label\": \"Goths cross Danube (376 AD)\"}, {\"lat\": 41.9, \"lng\": 12.5, \"label\": \"Sack of Rome (410 AD)\"}, {\"lat\": 48.0, \"lng\": 18.0, \"label\": \"Huns advance\"}]}"
-      },
-      "sources": [
-        {
-          "claim": "Goths crossed the Danube in 376 AD.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Gothic_War_(376%E2%80%93382)"
-        },
-        {
-          "claim": "The Vandals sacked Rome in 455 AD.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Sack_of_Rome_(455)"
-        }
-      ],
-      "durationMs": 8000
-    },
-    {
-      "id": "scene-04",
-      "narration": "The sheer scale of the empire made it ungovernable. Emperor Diocletian first split it, then Constantine moved the capital to Constantinople. While the Western Roman Empire buckled under pressure, the Eastern, Byzantine Empire, with its wealth and strategic location, would endure for another thousand years, a stark contrast to the West's rapid decline.",
-      "visual": {
-        "type": "timeline",
-        "directive": "{\"events\": [{\"year\": \"285 AD\", \"title\": \"Diocletian splits empire\"}, {\"year\": \"330 AD\", \"title\": \"Constantinople founded\"}, {\"year\": \"395 AD\", \"title\": \"Permanent East-West split\"}]}"
-      },
-      "sources": [
-        {
-          "claim": "Diocletian divided the Roman Empire.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Diocletian"
-        },
-        {
-          "claim": "Constantine founded Constantinople as the new capital.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Constantinople"
-        }
-      ],
-      "durationMs": 8000
+      "durationMs": 7500
     },
     {
       "id": "scene-05",
-      "narration": "The year 410 AD. Alaric's Visigoths breached the seemingly impregnable walls of Rome, plundering the Eternal City. This wasn't the final blow, but a profound psychological shock, shattering the illusion of Roman invincibility and signaling a new, brutal reality.",
+      "narration": "Then came the World Wide Web in 1991, making the internet accessible to everyone. Suddenly, a complex network was transformed into a user-friendly space. By the mid-90s, the internet was exploding.",
+      "onScreenText": "The Web Goes Public",
       "visual": {
-        "type": "quoteCard",
-        "directive": "{\"quote\": \"My voice sticks in my throat, and as I dictate, sobs choke my words. The City which had taken the whole world, was itself taken.\", \"author\": \"Saint Jerome\", \"context\": \"Letter 127, reacting to the Sack of Rome (410 AD)\"}"
+        "type": "stat",
+        "directive": "{\"value\": 1995, \"prefix\": \"\", \"suffix\": \"\", \"label\": \"Year the Web took off\"}"
       },
       "sources": [
         {
-          "claim": "The Visigoths under Alaric sacked Rome in 410 AD.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)"
+          "claim": "The World Wide Web was invented in 1991 by Tim Berners-Lee.",
+          "sourceUrl": "https://home.cern/science/computing/birth-web"
         },
         {
-          "claim": "Saint Jerome's quote on the sack of Rome.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Saint_Jerome"
+          "claim": "Commercial internet use grew rapidly in the mid-1990s.",
+          "sourceUrl": "https://www.pewresearch.org/internet/2014/02/27/timeline-of-the-internet-1995-2014/"
         }
       ],
       "durationMs": 7000
     },
     {
       "id": "scene-06",
-      "narration": "Finally, in 476 AD, the last Western Roman Emperor, Romulus Augustulus, was deposed by the Germanic chieftain Odoacer. But this wasn't an explosion, more a whimper. The empire had long since fractured, its power diffused among various barbarian kingdoms. The date simply solidified a reality already in motion.",
+      "narration": "From dial-up to broadband, from static pages to dynamic social spaces, the internet evolved at breakneck speed. Web 2.0 brought user-generated content, mobile devices put the internet in our pockets, and social media connected us like never before.",
+      "onScreenText": "Web 2.0 & Mobile Revolution",
       "visual": {
-        "type": "stat",
-        "directive": "{\"value\": 476, \"prefix\": \"AD\", \"suffix\": \"\", \"label\": \"Deposition of Romulus Augustulus\"}"
+        "type": "timeline",
+        "directive": "{\"events\": [{\"year\": \"2004\", \"title\": \"Facebook launched\"}, {\"year\": \"2007\", \"title\": \"iPhone released\"}, {\"year\": \"2010\", \"title\": \"Instagram launched\"}]}"
       },
       "sources": [
         {
-          "claim": "Romulus Augustulus was deposed in 476 AD by Odoacer.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Romulus_Augustulus"
+          "claim": "Key milestones in Web 2.0 and mobile internet.",
+          "sourceUrl": "https://www.britannica.com/topic/Web-2.0"
         }
       ],
-      "durationMs": 7000
+      "durationMs": 7500
     },
     {
       "id": "scene-07",
-      "narration": "Yet, Rome never truly died. Its legacy permeates our laws, languages, architecture, and political thought. The 'fall' was a transformation, not an annihilation, laying the groundwork for medieval Europe and shaping the modern world in ways we still feel today. The ghost of Rome continues to inspire, warn, and fascinate.",
+      "narration": "The numbers speak for themselves. What began as a niche academic tool now connects billions, transforming commerce, communication, and culture. The internet isn't just a technology; it's a fundamental part of modern life.",
+      "onScreenText": "A Connected Planet",
       "visual": {
-        "type": "archiveMontage",
-        "directive": "{}",
-        "assets": [
-          {
-            "ref": "https://images.pexels.com/photos/1004584/pexels-photo-1004584.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "kind": "image",
-            "source": "wikimedia",
-            "license": {
-              "type": "CC BY-SA 4.0",
-              "attributionRequired": true,
-              "attributionText": "Roman Forum from Capitoline Hill"
-            }
-          },
-          {
-            "ref": "https://images.pexels.com/photos/1488515/pexels-photo-1488515.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "kind": "image",
-            "source": "wikimedia",
-            "license": {
-              "type": "Public Domain",
-              "attributionRequired": false
-            }
-          },
-          {
-            "ref": "https://images.pexels.com/photos/208536/pexels-photo-208536.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "kind": "image",
-            "source": "wikimedia",
-            "license": {
-              "type": "CC BY-SA 2.0",
-              "attributionRequired": true,
-              "attributionText": "Westminster Abbey (Romanesque influence)"
-            }
-          }
-        ]
+        "type": "chart",
+        "directive": "{\"title\": \"Global Internet Users (Billions)\", \"data\": [{\"label\": \"1995\", \"value\": 0.016}, {\"label\": \"2005\", \"value\": 1.0}, {\"label\": \"2015\", \"value\": 3.2}, {\"label\": \"2023\", \"value\": 5.1}]}"
       },
       "sources": [
         {
-          "claim": "Roman law, language, and architecture heavily influenced subsequent European development.",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Legacy_of_the_Roman_Empire"
+          "claim": "Internet user statistics.",
+          "sourceUrl": "https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/"
         }
       ],
       "durationMs": 8000
+    },
+    {
+      "id": "scene-08",
+      "narration": "From its humble beginnings to its omnipresent status, the internet's story is one of relentless innovation and profound impact. And as new technologies emerge, its evolution is far from over.",
+      "onScreenText": "The Future is Connected",
+      "visual": {
+        "type": "titleCard",
+        "directive": "{\"title\": \"Our Connected Future\", \"subtitle\": \"What's Next?\"}"
+      },
+      "sources": [
+        {
+          "claim": "General conclusion on the internet's impact and future.",
+          "sourceUrl": "https://www.pewresearch.org/internet/223/the-future-of-the-internet/"
+        }
+      ],
+      "durationMs": 6500
     }
   ],
   "status": "draft"

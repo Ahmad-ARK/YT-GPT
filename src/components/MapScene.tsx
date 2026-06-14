@@ -90,15 +90,6 @@ export const MapScene: React.FC<MapSceneProps> = ({ styleGuide, scene, durationM
       });
   }, [handle]);
 
-  // Center on Mediterranean
-  const projection = useMemo(() => {
-    return d3.geoMercator().center([20, 36]).scale(2500).translate([1920 / 2, 1080 / 2]);
-  }, []);
-
-  const pathGenerator = useMemo(() => {
-    return d3.geoPath().projection(projection);
-  }, [projection]);
-
   // Parse directive for locations (from LLM generator)
   const directive = JSON.parse(scene.visual.directive || "{}");
   const locations = directive.locations || directive.labels || [];
@@ -108,6 +99,42 @@ export const MapScene: React.FC<MapSceneProps> = ({ styleGuide, scene, durationM
     name: loc.label || loc.name,
     coords: loc.coords || [loc.lng, loc.lat] // D3 projection takes [longitude, latitude]
   }));
+
+  // Dynamically center and scale based on pins
+  const projection = useMemo(() => {
+    const lons = labels.map((l: any) => l.coords[0]).filter((n: number) => !isNaN(n));
+    const lats = labels.map((l: any) => l.coords[1]).filter((n: number) => !isNaN(n));
+    
+    let centerLon = 20;
+    let centerLat = 36;
+    let scale = 2500; // Default zoom
+
+    if (lons.length > 0 && lats.length > 0) {
+      const minLon = Math.min(...lons);
+      const maxLon = Math.max(...lons);
+      const minLat = Math.min(...lats);
+      const maxLat = Math.max(...lats);
+      
+      centerLon = (minLon + maxLon) / 2;
+      centerLat = (minLat + maxLat) / 2;
+      
+      const lonSpread = Math.max(2, maxLon - minLon);
+      const latSpread = Math.max(2, maxLat - minLat);
+      const maxSpread = Math.max(lonSpread, latSpread);
+      
+      // Calculate a safe dynamic scale to fit all pins on screen
+      scale = Math.min(3000, 40000 / maxSpread);
+    }
+
+    return d3.geoMercator()
+      .center([centerLon, centerLat])
+      .scale(scale)
+      .translate([1920 / 2, 1080 / 2]);
+  }, [labels]);
+
+  const pathGenerator = useMemo(() => {
+    return d3.geoPath().projection(projection);
+  }, [projection]);
 
   const elevationSig = styleGuide.motion.signatures.labelElevation;
   const isElevated = elevationSig?.enabled;
