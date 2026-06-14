@@ -99,9 +99,15 @@ export const MapScene: React.FC<MapSceneProps> = ({ styleGuide, scene, durationM
     return d3.geoPath().projection(projection);
   }, [projection]);
 
-  // Parse directive for labels
+  // Parse directive for locations (from LLM generator)
   const directive = JSON.parse(scene.visual.directive || "{}");
-  const labels = directive.labels || [];
+  const locations = directive.locations || directive.labels || [];
+  
+  // Normalize to what the component expects
+  const labels = locations.map((loc: any) => ({
+    name: loc.label || loc.name,
+    coords: loc.coords || [loc.lng, loc.lat] // D3 projection takes [longitude, latitude]
+  }));
 
   const elevationSig = styleGuide.motion.signatures.labelElevation;
   const isElevated = elevationSig?.enabled;
