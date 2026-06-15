@@ -198,12 +198,14 @@ export const MapScene: React.FC<MapSceneProps> = ({ styleGuide, scene, durationM
           // D3 projected coordinates (flat map space)
           const [px, py] = projection(labelInfo.coords) || [1920/2, 1080/2];
           
-          // Stagger label entrance
-          const staggerFrames = Math.round((styleGuide.motion.signatures.staggerMs || 100) / 1000 * fps);
-          const labelFrame = Math.max(0, frame - 15 - index * staggerFrames);
+          // Spread labels evenly across 80% of the scene
+          const animStart = Math.round(totalFrames * 0.1);
+          const animEnd = Math.round(totalFrames * 0.75);
+          const slotFrames = labels.length > 1 ? (animEnd - animStart) / (labels.length - 1) : 0;
+          const labelAppearFrame = animStart + Math.round(index * slotFrames);
           
           const labelProgress = spring({
-            frame: labelFrame,
+            frame: Math.max(0, frame - labelAppearFrame),
             fps,
             config: { damping: 20, stiffness: 100 },
           });
@@ -308,7 +310,7 @@ export const MapScene: React.FC<MapSceneProps> = ({ styleGuide, scene, durationM
           textShadow: "0 4px 10px rgba(0,0,0,0.8)",
         }}
       >
-        {scene.narration}
+        {scene.onScreenText || ""}
       </div>
     </AbsoluteFill>
   );

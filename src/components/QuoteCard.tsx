@@ -145,7 +145,7 @@ export const QuoteCard: React.FC<QuoteCardProps> = ({ styleGuide, scene, duratio
           textShadow: "0 4px 10px rgba(0,0,0,0.8)",
         }}
       >
-        {scene.narration}
+        {scene.onScreenText || ""}
       </div>
     </AbsoluteFill>
   );

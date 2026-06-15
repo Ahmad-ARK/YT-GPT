@@ -42,12 +42,14 @@ export const ArchiveMontageScene: React.FC<ArchiveMontageSceneProps> = ({ styleG
     >
       <div style={{ position: "relative", width: "100%", height: "100%" }}>
         {assets.map((asset: any, index: number) => {
-          // Stagger each image entrance by 1 second (30 frames)
-          const staggerFrames = 30;
-          const imageFrame = Math.max(0, frame - index * staggerFrames);
+          // Spread images evenly across 70% of the scene
+          const animStart = Math.round(totalFrames * 0.05);
+          const animEnd = Math.round(totalFrames * 0.6);
+          const slotFrames = assets.length > 1 ? (animEnd - animStart) / (assets.length - 1) : 0;
+          const imageAppearFrame = animStart + Math.round(index * slotFrames);
 
           const imageProgress = spring({
-            frame: imageFrame,
+            frame: Math.max(0, frame - imageAppearFrame),
             fps,
             config: { damping: 15, mass: 1.5 },
           });
@@ -118,7 +120,7 @@ export const ArchiveMontageScene: React.FC<ArchiveMontageSceneProps> = ({ styleG
           zIndex: 999, // Ensure text is always on top of images
         }}
       >
-        {scene.narration}
+        {scene.onScreenText || ""}
       </div>
     </AbsoluteFill>
   );

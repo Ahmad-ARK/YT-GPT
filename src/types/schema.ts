@@ -12,7 +12,8 @@ export type ResearchOutput = {
 export type VisualType =
   | "titleCard" | "timeline" | "map" | "chart" | "stat"
   | "comparison" | "quoteCard" | "archivalPhoto" | "newspaper"
-  | "document" | "globe" | "archiveMontage"
+  | "document" | "globe" | "archiveMontage" | "countdown"
+  | "infographic" | "ranking" | "cinematicPhoto"
   | "genImage" | "genVideo" | "hyperframeClip";
 
 export type Asset = {
@@ -27,20 +28,26 @@ export type Asset = {
   };
 };
 
+export type VisualEntry = {
+  type: VisualType;
+  directive: string;
+  style?: Record<string, unknown>;
+  assets?: Asset[];
+  weight?: number; // Relative duration weight (default: 1)
+};
+
 export type Scene = {
   id: string;
   narration: string;
   onScreenText?: string;
-  visual: {
-    type: VisualType;
-    directive: string;
-    style?: Record<string, unknown>;
-    assets?: Asset[];
-  };
+  visual: VisualEntry;          // Legacy single visual (still supported)
+  visuals?: VisualEntry[];      // New: array of visuals for multi-cut segments
   sources: SourcedFact[];
   durationMs?: number;
+  audioFilename?: string;
   audioRef?: string;
   wordTimings?: { word: string; startMs: number; endMs: number }[];
+  sfx?: string;
 };
 
 export type Storyboard = {
@@ -50,6 +57,7 @@ export type Storyboard = {
   thesis: string;
   scenes: Scene[];
   status: "draft" | "script_approved" | "rendered" | "final_approved" | "uploaded";
+  bgMusic?: string;
 };
 
 export type StyleGuide = {

@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "remotion studio src/index.ts",
     "build": "remotion render src/index.ts Documentary out/video.mp4",
-    "generate": "tsx scripts/generate.ts"
+    "generate": "tsx scripts/generate.ts",
+    "tts": "tsx scripts/tts.ts",
+    "fetch-assets": "tsx scripts/fetch-assets.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,8 @@
     "@remotion/cli": "^4.0.476",
     "d3": "^7.9.0",
     "dotenv": "^17.4.2",
+    "get-audio-duration": "^4.0.1",
+    "google-tts-api": "^2.0.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "remotion": "^4.0.476"

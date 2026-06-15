@@ -17,20 +17,23 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ styleGuide, scene,
 
   const totalFrames = Math.max(1, Math.floor((durationMs) / 1000 * fps));
 
-  // The main timeline line draws downwards
-  const lineProgress = spring({
-    frame: Math.max(0, frame - 15),
-    fps,
-    config: { damping: 50, stiffness: 20 }, // Very slow draw
-  });
-  
-  // Assuming a max height of 600px for the timeline UI
-  const lineDrawHeight = interpolate(lineProgress, [0, 1], [0, 600], { extrapolateRight: "clamp" });
+  // Reserve 10% at start for fade-in, 10% at end for breathing room
+  const animStartFrame = Math.round(totalFrames * 0.08);
+  const animEndFrame = Math.round(totalFrames * 0.85);
+  const animWindow = animEndFrame - animStartFrame;
+
+  // Each event gets an evenly spaced slot across the animation window
+  const slotFrames = events.length > 1 ? animWindow / (events.length - 1) : animWindow;
+
+  // The line draws from animStartFrame to the last event's appearance
+  const lineDrawHeight = interpolate(
+    frame,
+    [animStartFrame, animEndFrame],
+    [0, 600],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+  );
 
   const opacity = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
-
-  // Stagger each event
-  const staggerFrames = Math.round(fps * 1.5); // 1.5 seconds between events
 
   return (
     <AbsoluteFill
@@ -53,7 +56,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ styleGuide, scene,
         <div
           style={{
             position: "absolute",
-            left: "50px", // Offset from left
+            left: "50px",
             top: 0,
             width: "4px",
             height: `${lineDrawHeight}px`,
@@ -64,20 +67,18 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ styleGuide, scene,
 
         {/* The Events */}
         {events.map((ev: any, index: number) => {
-          const evFrame = Math.max(0, frame - 30 - index * staggerFrames);
-          
+          // Each event appears at its evenly-spaced slot
+          const eventAppearFrame = animStartFrame + Math.round(index * slotFrames);
+
           const evProgress = spring({
-            frame: evFrame,
+            frame: Math.max(0, frame - eventAppearFrame),
             fps,
             config: { damping: 15 },
           });
 
-          // Only show the node if the line has drawn past it
-          const yPosition = (index * 600) / Math.max(1, events.length - 1 || 1);
-          const isLinePast = lineDrawHeight >= yPosition;
-          
-          // Actually, we'll let the spring handle the pop-in right when the line gets there
-          // by tuning staggerFrames. For now, just use evProgress.
+          const yPosition = events.length > 1
+            ? (index * 600) / (events.length - 1)
+            : 300;
 
           const nodeScale = interpolate(evProgress, [0, 1], [0, 1]);
           const textOpacity = interpolate(evProgress, [0, 1], [0, 1]);
@@ -138,7 +139,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ styleGuide, scene,
         })}
       </div>
 
-      {/* Narrative Text */}
+      {/* On-Screen Text */}
       <div
         style={{
           position: "absolute",
@@ -152,7 +153,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ styleGuide, scene,
           textShadow: "0 4px 10px rgba(0,0,0,0.8)",
         }}
       >
-        {scene.narration}
+        {scene.onScreenText || ""}
       </div>
     </AbsoluteFill>
   );

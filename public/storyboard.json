@@ -1,173 +1,136 @@
 {
-  "id": "internet-history-60s",
-  "channelId": "documentary-channel-alpha",
-  "topic": "The History of the Internet",
-  "thesis": "From military research to a global public utility, the internet's rapid evolution has fundamentally reshaped human connection, information access, and society itself.",
+  "id": "new-scenes-test",
+  "channelId": "digital-journeys-doc",
+  "topic": "The Space Race",
+  "thesis": "Testing the new comparison and newspaper scenes.",
   "scenes": [
     {
       "id": "scene-01",
-      "narration": "In just a few decades, a radical idea born in the shadows of the Cold War transformed into the neural network of our planet. This is the lightning-fast story of how the internet became everything.",
-      "onScreenText": "The Internet: Everything, Everywhere, All At Once",
-      "visual": {
-        "type": "titleCard",
-        "directive": "{\"title\": \"The Internet\", \"subtitle\": \"A Global Revolution\"}"
-      },
-      "sources": [
+      "narration": "In the mid-twentieth century, two global superpowers emerged from the ashes of World War Two. On one side stood the United States, championing capitalism. On the other, the Soviet Union, driven by a strict command economy. The stage was set for a conflict unlike any other.",
+      "onScreenText": "A World Divided",
+      "visuals": [
         {
-          "claim": "The internet's origins trace back to Cold War era research.",
-          "sourceUrl": "https://www.history.com/topics/inventions/history-of-the-internet"
+          "type": "comparison",
+          "directive": "{\"title\": \"The Cold War Divide\", \"left\": {\"title\": \"United States\", \"subtitle\": \"Capitalism\", \"triggerWord\": \"states\", \"points\": [{\"text\": \"Free Market\", \"triggerWord\": \"capitalism\"}, {\"text\": \"NATO Alliance\", \"triggerWord\": \"states\"}]}, \"right\": {\"title\": \"Soviet Union\", \"subtitle\": \"Communism\", \"triggerWord\": \"soviet\", \"points\": [{\"text\": \"Command Economy\", \"triggerWord\": \"economy\"}, {\"text\": \"Warsaw Pact\", \"triggerWord\": \"conflict\"}]}}",
+          "weight": 1
         }
       ],
-      "durationMs": 7000
-    },
-    {
-      "id": "scene-02",
-      "narration": "Our journey begins in 1969. The U.S. Department of Defense launched ARPANET, a groundbreaking network designed to connect research institutions. Its core innovation? Packet switching, a resilient way to send data.",
-      "onScreenText": "1969: ARPANET is Born",
-      "visual": {
-        "type": "timeline",
-        "directive": "{\"events\": [{\"year\": \"1969\", \"title\": \"ARPANET goes live\"}, {\"year\": \"1971\", \"title\": \"First email sent\"}, {\"year\": \"1974\", \"title\": \"TCP/IP concept emerges\"}]}"
-      },
-      "sources": [
-        {
-          "claim": "ARPANET was launched in 1969 by the DoD.",
-          "sourceUrl": "https://www.britannica.com/technology/ARPANET"
-        },
-        {
-          "claim": "Packet switching was a key innovation.",
-          "sourceUrl": "https://www.www.internetsociety.org/internet/history-internet/brief-history-internet/"
-        }
-      ],
-      "durationMs": 7000
+      "sources": [],
+      "durationMs": 22100,
+      "audioFilename": "scene-01.mp3"
     },
     {
       "id": "scene-03",
-      "narration": "What started as a modest network linking just four nodes across the American Southwest quickly expanded. UCLA, Stanford, UCSB, and the University of Utah: these were the first digital crossroads.",
-      "onScreenText": "Connecting the First Nodes",
-      "visual": {
-        "type": "map",
-        "directive": "{\"locations\": [{\"lat\": 34.0689, \"lng\": -118.4452, \"label\": \"UCLA\"}, {\"lat\": 37.4241, \"lng\": -122.1661, \"label\": \"Stanford Research Institute\"}, {\"lat\": 34.4140, \"lng\": -119.8489, \"label\": \"UC Santa Barbara\"}, {\"lat\": 40.7608, \"lng\": -111.8910, \"label\": \"University of Utah\"}]}"
-      },
-      "sources": [
+      "narration": "The tension spread rapidly across the ocean. From Moscow in the heart of the Soviet Union, to Washington D.C., the world was connected by a web of geopolitical chess.",
+      "onScreenText": "A Global Standoff",
+      "durationMs": 13028,
+      "audioFilename": "scene-03.mp3",
+      "visuals": [
         {
-          "claim": "The first four ARPANET nodes.",
-          "sourceUrl": "https://www.computerhistory.org/internethistory/1960s/"
+          "type": "globe",
+          "directive": "{\"startRotation\": [-37, -50, 0], \"endRotation\": [77, -35, 0], \"locations\": [{\"lat\": 55.75, \"lng\": 37.61, \"label\": \"Moscow\", \"triggerWord\": \"Moscow\"}, {\"lat\": 38.9, \"lng\": -77.03, \"label\": \"Washington D.C.\", \"triggerWord\": \"Washington\"}], \"connections\": [{\"from\": [37.61, 55.75], \"to\": [-77.03, 38.9], \"triggerWord\": \"connected\"}]}",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "narration": "The battleground wasn't just ideological; it was extraterrestrial. In 1969, the United States achieved the impossible. A human being set foot on another celestial body, sending shockwaves through the Soviet command and headlines across the globe.",
+      "onScreenText": "The Ultimate Victory",
+      "visuals": [
+        {
+          "type": "newspaper",
+          "directive": "{\"paperName\": \"THE GLOBAL TIMES\", \"date\": \"JULY 21, 1969\", \"headline\": \"MAN WALKS ON MOON!\", \"subhead\": \"Armstrong Takes Giant Leap For Mankind\"}",
+          "weight": 1
         }
       ],
-      "durationMs": 6500
+      "sources": [],
+      "durationMs": 19796,
+      "audioFilename": "scene-02.mp3"
     },
     {
       "id": "scene-04",
-      "narration": "Pioneers like Vint Cerf and Bob Kahn developed TCP/IP, the foundational protocols that allowed disparate networks to communicate, birthing the 'internet' as we know it. This was the true global handshake.",
-      "onScreenText": "The Architects of Connection",
-      "visual": {
-        "type": "archiveMontage",
-        "directive": "{}",
-        "assets": [
-          {
-            "ref": "https://images.pexels.com/photos/1723871/pexels-photo-1723871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            "kind": "image",
-            "source": "pexels",
-            "license": {
-              "type": "Pexels License",
-              "attributionRequired": false
-            }
-          },
-          {
-            "ref": "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            "kind": "image",
-            "source": "pexels",
-            "license": {
-              "type": "Pexels License",
-              "attributionRequired": false
-            }
-          },
-          {
-            "ref": "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            "kind": "image",
-            "source": "pexels",
-            "license": {
-              "type": "Pexels License",
-              "attributionRequired": false
-            }
-          }
-        ]
-      },
-      "sources": [
+      "narration": "Declassified files later revealed the true extent of the operation. Operatives were secretly instructed to maintain surveillance on all key facilities.",
+      "onScreenText": "The Secret Directive",
+      "visuals": [
         {
-          "claim": "Vint Cerf and Bob Kahn developed TCP/IP.",
-          "sourceUrl": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
+          "type": "document",
+          "directive": "{\"title\": \"CENTRAL INTELLIGENCE AGENCY\", \"date\": \"12 AUGUST 1969\", \"classification\": \"TOP SECRET\", \"refNumber\": \"CIA-RDP79-00927A004300080001-2\", \"text\": \"The subject has been observed making contact with known operatives in the sector. Further surveillance is required to determine the extent of the breach.\", \"highlights\": [{\"match\": \"making contact with known operatives\", \"triggerWord\": \"operatives\"}, {\"match\": \"surveillance is required\", \"triggerWord\": \"surveillance\"}], \"signature\": \"Director of Intelligence\"}",
+          "weight": 1
         }
       ],
-      "durationMs": 7500
+      "durationMs": 11588,
+      "audioFilename": "scene-04.mp3"
     },
     {
       "id": "scene-05",
-      "narration": "Then came the World Wide Web in 1991, making the internet accessible to everyone. Suddenly, a complex network was transformed into a user-friendly space. By the mid-90s, the internet was exploding.",
-      "onScreenText": "The Web Goes Public",
-      "visual": {
-        "type": "stat",
-        "directive": "{\"value\": 1995, \"prefix\": \"\", \"suffix\": \"\", \"label\": \"Year the Web took off\"}"
-      },
-      "sources": [
+      "narration": "The world held its breath for thirteen days. Thirteen days that would determine whether humanity survived or perished in nuclear fire.",
+      "onScreenText": "The Cuban Missile Crisis",
+      "visuals": [
         {
-          "claim": "The World Wide Web was invented in 1991 by Tim Berners-Lee.",
-          "sourceUrl": "https://home.cern/science/computing/birth-web"
-        },
-        {
-          "claim": "Commercial internet use grew rapidly in the mid-1990s.",
-          "sourceUrl": "https://www.pewresearch.org/internet/2014/02/27/timeline-of-the-internet-1995-2014/"
+          "type": "countdown",
+          "directive": "{\"from\": 13, \"to\": 0, \"label\": \"DAYS TO NUCLEAR WAR\", \"suffix\": \"days\"}",
+          "weight": 1
         }
       ],
-      "durationMs": 7000
+      "durationMs": 10028,
+      "audioFilename": "scene-05.mp3"
     },
     {
       "id": "scene-06",
-      "narration": "From dial-up to broadband, from static pages to dynamic social spaces, the internet evolved at breakneck speed. Web 2.0 brought user-generated content, mobile devices put the internet in our pockets, and social media connected us like never before.",
-      "onScreenText": "Web 2.0 & Mobile Revolution",
-      "visual": {
-        "type": "timeline",
-        "directive": "{\"events\": [{\"year\": \"2004\", \"title\": \"Facebook launched\"}, {\"year\": \"2007\", \"title\": \"iPhone released\"}, {\"year\": \"2010\", \"title\": \"Instagram launched\"}]}"
-      },
-      "sources": [
+      "narration": "The toll was staggering. Over sixty million casualties worldwide. The economic cost exceeded four trillion dollars. And more than seventy million people were displaced from their homes.",
+      "onScreenText": "The Price of Conflict",
+      "visuals": [
         {
-          "claim": "Key milestones in Web 2.0 and mobile internet.",
-          "sourceUrl": "https://www.britannica.com/topic/Web-2.0"
+          "type": "infographic",
+          "directive": "{\"title\": \"The Human Cost\", \"items\": [{\"icon\": \"💀\", \"value\": \"60M\", \"label\": \"Casualties\", \"triggerWord\": \"casualties\"}, {\"icon\": \"💰\", \"value\": \"$4T\", \"label\": \"Economic Cost\", \"triggerWord\": \"cost\"}, {\"icon\": \"🏠\", \"value\": \"70M\", \"label\": \"Displaced\", \"triggerWord\": \"displaced\"}]}",
+          "weight": 1
         }
       ],
-      "durationMs": 7500
+      "durationMs": 14012,
+      "audioFilename": "scene-06.mp3"
     },
     {
       "id": "scene-07",
-      "narration": "The numbers speak for themselves. What began as a niche academic tool now connects billions, transforming commerce, communication, and culture. The internet isn't just a technology; it's a fundamental part of modern life.",
-      "onScreenText": "A Connected Planet",
-      "visual": {
-        "type": "chart",
-        "directive": "{\"title\": \"Global Internet Users (Billions)\", \"data\": [{\"label\": \"1995\", \"value\": 0.016}, {\"label\": \"2005\", \"value\": 1.0}, {\"label\": \"2015\", \"value\": 3.2}, {\"label\": \"2023\", \"value\": 5.1}]}"
-      },
-      "sources": [
+      "narration": "Among history's deadliest conflicts, the Second World War stands alone with seventy million dead. The Mongol conquests claimed forty million. And the First World War took twenty million lives.",
+      "onScreenText": "Deadliest Conflicts",
+      "visuals": [
         {
-          "claim": "Internet user statistics.",
-          "sourceUrl": "https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/"
+          "type": "ranking",
+          "directive": "{\"title\": \"Deadliest Conflicts in History\", \"items\": [{\"rank\": 1, \"label\": \"World War II\", \"value\": \"70M\", \"triggerWord\": \"second\"}, {\"rank\": 2, \"label\": \"Mongol Conquests\", \"value\": \"40M\", \"triggerWord\": \"mongol\"}, {\"rank\": 3, \"label\": \"World War I\", \"value\": \"20M\", \"triggerWord\": \"first\"}]}",
+          "weight": 1
         }
       ],
-      "durationMs": 8000
+      "durationMs": 14516,
+      "audioFilename": "scene-07.mp3"
     },
     {
       "id": "scene-08",
-      "narration": "From its humble beginnings to its omnipresent status, the internet's story is one of relentless innovation and profound impact. And as new technologies emerge, its evolution is far from over.",
-      "onScreenText": "The Future is Connected",
-      "visual": {
-        "type": "titleCard",
-        "directive": "{\"title\": \"Our Connected Future\", \"subtitle\": \"What's Next?\"}"
-      },
-      "sources": [
+      "narration": "On July sixteenth, nineteen sixty nine, humanity took its greatest leap. The Apollo eleven mission lifted off from Kennedy Space Center, carrying three men to the moon.",
+      "onScreenText": "The Final Frontier",
+      "visuals": [
         {
-          "claim": "General conclusion on the internet's impact and future.",
-          "sourceUrl": "https://www.pewresearch.org/internet/223/the-future-of-the-internet/"
+          "type": "cinematicPhoto",
+          "directive": "{\"imageRef\": \"apollo11.jpg\", \"caption\": \"Apollo 11 Launch, 1969\", \"motion\": \"zoom-out\"}",
+          "weight": 1
         }
       ],
-      "durationMs": 6500
+      "durationMs": 13100,
+      "audioFilename": "scene-08.mp3"
+    },
+    {
+      "id": "scene-09",
+      "narration": "Fast forward a century, and the world had transformed entirely. Sprawling megalopolises dominated the landscape, bathed in the glow of neon rain.",
+      "onScreenText": "The Cybernetic Age",
+      "visuals": [
+        {
+          "type": "cinematicPhoto",
+          "directive": "{\"imageRef\": \"cybercity.png\", \"caption\": \"Neon Cityscapes\", \"motion\": \"pan-up\"}",
+          "weight": 1
+        }
+      ],
+      "durationMs": 11900,
+      "audioFilename": "scene-09.mp3"
     }
   ],
   "status": "draft"
