@@ -329,7 +329,7 @@ export const InfographicScene: React.FC<InfographicSceneProps> = ({
       >
         {items.map((item, i) => {
           const fallback = Math.floor((totalFrames / (items.length + 1)) * (i + 1));
-          const trigger = getTriggerFrame(narration, item.triggerWord, totalFrames, fallback);
+          const trigger = getTriggerFrame(scene, item.triggerWord, totalFrames, fallback);
 
           return (
             <StatCard

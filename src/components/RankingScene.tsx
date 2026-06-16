@@ -150,8 +150,7 @@ export const RankingScene: React.FC<RankingSceneProps> = ({
           const fallback = Math.floor(
             totalFrames * ((idx + 1) / (items.length + 1)),
           );
-          const triggerFrame = getTriggerFrame(
-            narration,
+          const triggerFrame = getTriggerFrame(scene,
             item.triggerWord,
             totalFrames,
             fallback,

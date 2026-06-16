@@ -18,6 +18,7 @@ import { CinematicPhotoScene } from './components/CinematicPhotoScene';
 import storyboard from '../public/storyboard.json';
 import { channelAStyleGuide } from './style/channelA';
 import { Scene as SceneType, VisualEntry } from './types/schema';
+import { Subtitles } from './components/Subtitles';
 
 // Helper: renders a single visual type
 const VisualRenderer: React.FC<{ visual: VisualEntry; scene: SceneType; durationMs: number }> = ({ visual, scene, durationMs }) => {
@@ -77,10 +78,59 @@ export const DocumentarySequence: React.FC = () => {
   const fps = 30;
   const bgMusic = storyboard.bgMusic; // e.g. "bg-music.mp3"
   
+  // Precompute merged narration segments for smooth volume ducking
+  const narrationSegments: {start: number, end: number}[] = [];
+  let currFrame = 0;
+  for (const scene of storyboard.scenes as any) {
+    const sceneFrames = Math.max(1, Math.floor((scene.durationMs || 5000) / 1000 * fps));
+    if (scene.audioFilename) {
+      narrationSegments.push({ start: currFrame, end: currFrame + sceneFrames });
+    }
+    currFrame += sceneFrames;
+  }
+
+  const mergedSegments: {start: number, end: number}[] = [];
+  if (narrationSegments.length > 0) {
+    let curr = narrationSegments[0];
+    for (let i = 1; i < narrationSegments.length; i++) {
+      if (narrationSegments[i].start <= curr.end + 5) {
+        curr.end = narrationSegments[i].end;
+      } else {
+        mergedSegments.push(curr);
+        curr = narrationSegments[i];
+      }
+    }
+    mergedSegments.push(curr);
+  }
+
+  const getDuckedVolume = (f: number) => {
+    const fadeLen = 30; // 1 second fade out/in
+    const duckVol = 0.03;
+    const loudVol = 0.15;
+    
+    for (const seg of mergedSegments) {
+      if (f >= seg.start && f <= seg.end) return duckVol; // Fully ducked during narration
+      
+      // Fading down before start
+      if (f >= seg.start - fadeLen && f < seg.start) {
+        const progress = (f - (seg.start - fadeLen)) / fadeLen;
+        return loudVol - (loudVol - duckVol) * progress;
+      }
+      
+      // Fading up after end
+      if (f > seg.end && f <= seg.end + fadeLen) {
+        const progress = (f - seg.end) / fadeLen;
+        return duckVol + (loudVol - duckVol) * progress;
+      }
+    }
+    
+    return loudVol;
+  };
+  
   return (
     <>
-      {/* Global Background Music */}
-      {bgMusic && <Audio src={staticFile(`audio/${bgMusic}`)} loop volume={0.08} />}
+      {/* Global Background Music with Ducking */}
+      {bgMusic && <Audio src={staticFile(`audio/${bgMusic}`)} loop volume={getDuckedVolume} />}
       
       <Series>
         {storyboard.scenes.map((scene: any) => {
@@ -100,22 +150,37 @@ export const DocumentarySequence: React.FC = () => {
               
               {/* Visual cuts */}
               <Series>
-                {visuals.map((visual: any, vIndex: number) => {
-                  const weight = visual.weight || 1;
-                  const visualDurationMs = Math.round((weight / totalWeight) * totalDurationMs);
-                  const visualDurationFrames = Math.max(1, Math.floor(visualDurationMs / 1000 * fps));
-                  
-                  return (
-                    <Series.Sequence key={`${scene.id}-v${vIndex}`} durationInFrames={visualDurationFrames}>
-                      <VisualRenderer visual={visual} scene={scene as SceneType} durationMs={visualDurationMs} />
-                    </Series.Sequence>
-                  );
-                })}
+                {(() => {
+                  let accumulatedFrames = 0;
+                  return visuals.map((visual: any, vIndex: number) => {
+                    const weight = visual.weight || 1;
+                    const visualDurationMs = (weight / totalWeight) * totalDurationMs;
+                    let visualDurationFrames = Math.round(visualDurationMs / 1000 * fps);
+                    
+                    // If this is the last visual, it takes all remaining frames
+                    if (vIndex === visuals.length - 1) {
+                      visualDurationFrames = totalDurationFrames - accumulatedFrames;
+                    }
+                    
+                    // Failsafe minimum 1 frame
+                    visualDurationFrames = Math.max(1, visualDurationFrames);
+                    accumulatedFrames += visualDurationFrames;
+                    
+                    return (
+                      <Series.Sequence key={`${scene.id}-v${vIndex}`} durationInFrames={visualDurationFrames}>
+                        <VisualRenderer visual={visual} scene={scene as SceneType} durationMs={visualDurationFrames * 1000 / fps} />
+                      </Series.Sequence>
+                    );
+                  });
+                })()}
               </Series>
             </Series.Sequence>
           );
         })}
       </Series>
+      
+      {/* Global Word-Synced Subtitles */}
+      <Subtitles styleGuide={channelAStyleGuide} scenes={storyboard.scenes as SceneType[]} fps={fps} />
     </>
   );
 };

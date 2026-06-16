@@ -16,20 +16,399 @@
         }
       ],
       "sources": [],
-      "durationMs": 22100,
-      "audioFilename": "scene-01.mp3"
+      "durationMs": 20228,
+      "audioFilename": "scene-01.mp3",
+      "wordTimings": [
+        {
+          "word": "In",
+          "startMs": 100,
+          "endMs": 259
+        },
+        {
+          "word": "the",
+          "startMs": 259,
+          "endMs": 499
+        },
+        {
+          "word": "mid-twentieth",
+          "startMs": 499,
+          "endMs": 1538
+        },
+        {
+          "word": "century,",
+          "startMs": 1538,
+          "endMs": 2177
+        },
+        {
+          "word": "two",
+          "startMs": 2177,
+          "endMs": 2417
+        },
+        {
+          "word": "global",
+          "startMs": 2417,
+          "endMs": 2896
+        },
+        {
+          "word": "superpowers",
+          "startMs": 2896,
+          "endMs": 3775
+        },
+        {
+          "word": "emerged",
+          "startMs": 3775,
+          "endMs": 4334
+        },
+        {
+          "word": "from",
+          "startMs": 4334,
+          "endMs": 4654
+        },
+        {
+          "word": "the",
+          "startMs": 4654,
+          "endMs": 4894
+        },
+        {
+          "word": "ashes",
+          "startMs": 4894,
+          "endMs": 5293
+        },
+        {
+          "word": "of",
+          "startMs": 5293,
+          "endMs": 5453
+        },
+        {
+          "word": "World",
+          "startMs": 5453,
+          "endMs": 5853
+        },
+        {
+          "word": "War",
+          "startMs": 5853,
+          "endMs": 6092
+        },
+        {
+          "word": "Two.",
+          "startMs": 6092,
+          "endMs": 6412
+        },
+        {
+          "word": "On",
+          "startMs": 6362,
+          "endMs": 6538
+        },
+        {
+          "word": "one",
+          "startMs": 6538,
+          "endMs": 6803
+        },
+        {
+          "word": "side",
+          "startMs": 6803,
+          "endMs": 7156
+        },
+        {
+          "word": "stood",
+          "startMs": 7156,
+          "endMs": 7597
+        },
+        {
+          "word": "the",
+          "startMs": 7597,
+          "endMs": 7862
+        },
+        {
+          "word": "United",
+          "startMs": 7862,
+          "endMs": 8391
+        },
+        {
+          "word": "States,",
+          "startMs": 8391,
+          "endMs": 9009
+        },
+        {
+          "word": "championing",
+          "startMs": 9009,
+          "endMs": 9979
+        },
+        {
+          "word": "capitalism.",
+          "startMs": 9979,
+          "endMs": 10949
+        },
+        {
+          "word": "On",
+          "startMs": 10950,
+          "endMs": 11127
+        },
+        {
+          "word": "the",
+          "startMs": 11127,
+          "endMs": 11394
+        },
+        {
+          "word": "other,",
+          "startMs": 11394,
+          "endMs": 11927
+        },
+        {
+          "word": "the",
+          "startMs": 11927,
+          "endMs": 12193
+        },
+        {
+          "word": "Soviet",
+          "startMs": 12193,
+          "endMs": 12726
+        },
+        {
+          "word": "Union,",
+          "startMs": 12726,
+          "endMs": 13259
+        },
+        {
+          "word": "driven",
+          "startMs": 13259,
+          "endMs": 13792
+        },
+        {
+          "word": "by",
+          "startMs": 13792,
+          "endMs": 13970
+        },
+        {
+          "word": "a",
+          "startMs": 13970,
+          "endMs": 14059
+        },
+        {
+          "word": "strict",
+          "startMs": 14059,
+          "endMs": 14592
+        },
+        {
+          "word": "command",
+          "startMs": 14592,
+          "endMs": 15214
+        },
+        {
+          "word": "economy.",
+          "startMs": 15214,
+          "endMs": 15924
+        },
+        {
+          "word": "The",
+          "startMs": 15925,
+          "endMs": 16199
+        },
+        {
+          "word": "stage",
+          "startMs": 16199,
+          "endMs": 16656
+        },
+        {
+          "word": "was",
+          "startMs": 16656,
+          "endMs": 16931
+        },
+        {
+          "word": "set",
+          "startMs": 16931,
+          "endMs": 17205
+        },
+        {
+          "word": "for",
+          "startMs": 17205,
+          "endMs": 17479
+        },
+        {
+          "word": "a",
+          "startMs": 17479,
+          "endMs": 17571
+        },
+        {
+          "word": "conflict",
+          "startMs": 17571,
+          "endMs": 18303
+        },
+        {
+          "word": "unlike",
+          "startMs": 18303,
+          "endMs": 18851
+        },
+        {
+          "word": "any",
+          "startMs": 18851,
+          "endMs": 19126
+        },
+        {
+          "word": "other.",
+          "startMs": 19126,
+          "endMs": 19674
+        }
+      ]
     },
     {
       "id": "scene-03",
       "narration": "The tension spread rapidly across the ocean. From Moscow in the heart of the Soviet Union, to Washington D.C., the world was connected by a web of geopolitical chess.",
       "onScreenText": "A Global Standoff",
-      "durationMs": 13028,
+      "durationMs": 11948,
       "audioFilename": "scene-03.mp3",
       "visuals": [
         {
           "type": "globe",
           "directive": "{\"startRotation\": [-37, -50, 0], \"endRotation\": [77, -35, 0], \"locations\": [{\"lat\": 55.75, \"lng\": 37.61, \"label\": \"Moscow\", \"triggerWord\": \"Moscow\"}, {\"lat\": 38.9, \"lng\": -77.03, \"label\": \"Washington D.C.\", \"triggerWord\": \"Washington\"}], \"connections\": [{\"from\": [37.61, 55.75], \"to\": [-77.03, 38.9], \"triggerWord\": \"connected\"}]}",
           "weight": 1
+        }
+      ],
+      "wordTimings": [
+        {
+          "word": "The",
+          "startMs": 100,
+          "endMs": 367
+        },
+        {
+          "word": "tension",
+          "startMs": 367,
+          "endMs": 991
+        },
+        {
+          "word": "spread",
+          "startMs": 991,
+          "endMs": 1526
+        },
+        {
+          "word": "rapidly",
+          "startMs": 1526,
+          "endMs": 2150
+        },
+        {
+          "word": "across",
+          "startMs": 2150,
+          "endMs": 2685
+        },
+        {
+          "word": "the",
+          "startMs": 2685,
+          "endMs": 2952
+        },
+        {
+          "word": "ocean.",
+          "startMs": 2952,
+          "endMs": 3487
+        },
+        {
+          "word": "From",
+          "startMs": 3437,
+          "endMs": 3756
+        },
+        {
+          "word": "Moscow",
+          "startMs": 3756,
+          "endMs": 4233
+        },
+        {
+          "word": "in",
+          "startMs": 4233,
+          "endMs": 4393
+        },
+        {
+          "word": "the",
+          "startMs": 4393,
+          "endMs": 4631
+        },
+        {
+          "word": "heart",
+          "startMs": 4631,
+          "endMs": 5030
+        },
+        {
+          "word": "of",
+          "startMs": 5030,
+          "endMs": 5189
+        },
+        {
+          "word": "the",
+          "startMs": 5189,
+          "endMs": 5428
+        },
+        {
+          "word": "Soviet",
+          "startMs": 5428,
+          "endMs": 5905
+        },
+        {
+          "word": "Union,",
+          "startMs": 5905,
+          "endMs": 6383
+        },
+        {
+          "word": "to",
+          "startMs": 6383,
+          "endMs": 6542
+        },
+        {
+          "word": "Washington",
+          "startMs": 6542,
+          "endMs": 7339
+        },
+        {
+          "word": "D.C.,",
+          "startMs": 7339,
+          "endMs": 7737
+        },
+        {
+          "word": "the",
+          "startMs": 7737,
+          "endMs": 7976
+        },
+        {
+          "word": "world",
+          "startMs": 7976,
+          "endMs": 8374
+        },
+        {
+          "word": "was",
+          "startMs": 8374,
+          "endMs": 8613
+        },
+        {
+          "word": "connected",
+          "startMs": 8613,
+          "endMs": 9329
+        },
+        {
+          "word": "by",
+          "startMs": 9329,
+          "endMs": 9489
+        },
+        {
+          "word": "a",
+          "startMs": 9489,
+          "endMs": 9568
+        },
+        {
+          "word": "web",
+          "startMs": 9568,
+          "endMs": 9807
+        },
+        {
+          "word": "of",
+          "startMs": 9807,
+          "endMs": 9966
+        },
+        {
+          "word": "geopolitical",
+          "startMs": 9966,
+          "endMs": 10922
+        },
+        {
+          "word": "chess.",
+          "startMs": 10922,
+          "endMs": 11400
         }
       ]
     },
@@ -45,8 +424,190 @@
         }
       ],
       "sources": [],
-      "durationMs": 19796,
-      "audioFilename": "scene-02.mp3"
+      "durationMs": 18020,
+      "audioFilename": "scene-02.mp3",
+      "wordTimings": [
+        {
+          "word": "The",
+          "startMs": 100,
+          "endMs": 341
+        },
+        {
+          "word": "battleground",
+          "startMs": 341,
+          "endMs": 1307
+        },
+        {
+          "word": "wasn't",
+          "startMs": 1307,
+          "endMs": 1790
+        },
+        {
+          "word": "just",
+          "startMs": 1790,
+          "endMs": 2112
+        },
+        {
+          "word": "ideological;",
+          "startMs": 2112,
+          "endMs": 3078
+        },
+        {
+          "word": "it",
+          "startMs": 3078,
+          "endMs": 3239
+        },
+        {
+          "word": "was",
+          "startMs": 3239,
+          "endMs": 3481
+        },
+        {
+          "word": "extraterrestrial.",
+          "startMs": 3481,
+          "endMs": 4850
+        },
+        {
+          "word": "In",
+          "startMs": 4800,
+          "endMs": 5008
+        },
+        {
+          "word": "1969,",
+          "startMs": 5008,
+          "endMs": 5529
+        },
+        {
+          "word": "the",
+          "startMs": 5529,
+          "endMs": 5842
+        },
+        {
+          "word": "United",
+          "startMs": 5842,
+          "endMs": 6468
+        },
+        {
+          "word": "States",
+          "startMs": 6468,
+          "endMs": 7093
+        },
+        {
+          "word": "achieved",
+          "startMs": 7093,
+          "endMs": 7927
+        },
+        {
+          "word": "the",
+          "startMs": 7927,
+          "endMs": 8240
+        },
+        {
+          "word": "impossible.",
+          "startMs": 8240,
+          "endMs": 9387
+        },
+        {
+          "word": "A",
+          "startMs": 9387,
+          "endMs": 9462
+        },
+        {
+          "word": "human",
+          "startMs": 9462,
+          "endMs": 9835
+        },
+        {
+          "word": "being",
+          "startMs": 9835,
+          "endMs": 10208
+        },
+        {
+          "word": "set",
+          "startMs": 10208,
+          "endMs": 10432
+        },
+        {
+          "word": "foot",
+          "startMs": 10432,
+          "endMs": 10731
+        },
+        {
+          "word": "on",
+          "startMs": 10731,
+          "endMs": 10880
+        },
+        {
+          "word": "another",
+          "startMs": 10880,
+          "endMs": 11403
+        },
+        {
+          "word": "celestial",
+          "startMs": 11403,
+          "endMs": 12075
+        },
+        {
+          "word": "body,",
+          "startMs": 12075,
+          "endMs": 12448
+        },
+        {
+          "word": "sending",
+          "startMs": 12448,
+          "endMs": 12970
+        },
+        {
+          "word": "shockwaves",
+          "startMs": 12970,
+          "endMs": 13717
+        },
+        {
+          "word": "through",
+          "startMs": 13717,
+          "endMs": 14239
+        },
+        {
+          "word": "the",
+          "startMs": 14239,
+          "endMs": 14463
+        },
+        {
+          "word": "Soviet",
+          "startMs": 14463,
+          "endMs": 14911
+        },
+        {
+          "word": "command",
+          "startMs": 14911,
+          "endMs": 15434
+        },
+        {
+          "word": "and",
+          "startMs": 15434,
+          "endMs": 15658
+        },
+        {
+          "word": "headlines",
+          "startMs": 15658,
+          "endMs": 16330
+        },
+        {
+          "word": "across",
+          "startMs": 16330,
+          "endMs": 16778
+        },
+        {
+          "word": "the",
+          "startMs": 16778,
+          "endMs": 17002
+        },
+        {
+          "word": "globe.",
+          "startMs": 17002,
+          "endMs": 17450
+        }
+      ]
     },
     {
       "id": "scene-04",
@@ -59,8 +620,115 @@
           "weight": 1
         }
       ],
-      "durationMs": 11588,
-      "audioFilename": "scene-04.mp3"
+      "durationMs": 10748,
+      "audioFilename": "scene-04.mp3",
+      "wordTimings": [
+        {
+          "word": "Declassified",
+          "startMs": 100,
+          "endMs": 1075
+        },
+        {
+          "word": "files",
+          "startMs": 1075,
+          "endMs": 1481
+        },
+        {
+          "word": "later",
+          "startMs": 1481,
+          "endMs": 1887
+        },
+        {
+          "word": "revealed",
+          "startMs": 1887,
+          "endMs": 2537
+        },
+        {
+          "word": "the",
+          "startMs": 2537,
+          "endMs": 2781
+        },
+        {
+          "word": "true",
+          "startMs": 2781,
+          "endMs": 3106
+        },
+        {
+          "word": "extent",
+          "startMs": 3106,
+          "endMs": 3593
+        },
+        {
+          "word": "of",
+          "startMs": 3593,
+          "endMs": 3756
+        },
+        {
+          "word": "the",
+          "startMs": 3756,
+          "endMs": 4000
+        },
+        {
+          "word": "operation.",
+          "startMs": 4000,
+          "endMs": 4812
+        },
+        {
+          "word": "Operatives",
+          "startMs": 4762,
+          "endMs": 5507
+        },
+        {
+          "word": "were",
+          "startMs": 5507,
+          "endMs": 5805
+        },
+        {
+          "word": "secretly",
+          "startMs": 5805,
+          "endMs": 6401
+        },
+        {
+          "word": "instructed",
+          "startMs": 6401,
+          "endMs": 7146
+        },
+        {
+          "word": "to",
+          "startMs": 7146,
+          "endMs": 7295
+        },
+        {
+          "word": "maintain",
+          "startMs": 7295,
+          "endMs": 7890
+        },
+        {
+          "word": "surveillance",
+          "startMs": 7890,
+          "endMs": 8784
+        },
+        {
+          "word": "on",
+          "startMs": 8784,
+          "endMs": 8933
+        },
+        {
+          "word": "all",
+          "startMs": 8933,
+          "endMs": 9157
+        },
+        {
+          "word": "key",
+          "startMs": 9157,
+          "endMs": 9380
+        },
+        {
+          "word": "facilities.",
+          "startMs": 9380,
+          "endMs": 10200
+        }
+      ]
     },
     {
       "id": "scene-05",
@@ -73,8 +741,115 @@
           "weight": 1
         }
       ],
-      "durationMs": 10028,
-      "audioFilename": "scene-05.mp3"
+      "durationMs": 9668,
+      "audioFilename": "scene-05.mp3",
+      "wordTimings": [
+        {
+          "word": "The",
+          "startMs": 100,
+          "endMs": 366
+        },
+        {
+          "word": "world",
+          "startMs": 366,
+          "endMs": 810
+        },
+        {
+          "word": "held",
+          "startMs": 810,
+          "endMs": 1166
+        },
+        {
+          "word": "its",
+          "startMs": 1166,
+          "endMs": 1432
+        },
+        {
+          "word": "breath",
+          "startMs": 1432,
+          "endMs": 1965
+        },
+        {
+          "word": "for",
+          "startMs": 1965,
+          "endMs": 2232
+        },
+        {
+          "word": "thirteen",
+          "startMs": 2232,
+          "endMs": 2943
+        },
+        {
+          "word": "days.",
+          "startMs": 2943,
+          "endMs": 3387
+        },
+        {
+          "word": "Thirteen",
+          "startMs": 3337,
+          "endMs": 3937
+        },
+        {
+          "word": "days",
+          "startMs": 3937,
+          "endMs": 4237
+        },
+        {
+          "word": "that",
+          "startMs": 4237,
+          "endMs": 4537
+        },
+        {
+          "word": "would",
+          "startMs": 4537,
+          "endMs": 4912
+        },
+        {
+          "word": "determine",
+          "startMs": 4912,
+          "endMs": 5587
+        },
+        {
+          "word": "whether",
+          "startMs": 5587,
+          "endMs": 6112
+        },
+        {
+          "word": "humanity",
+          "startMs": 6112,
+          "endMs": 6712
+        },
+        {
+          "word": "survived",
+          "startMs": 6712,
+          "endMs": 7312
+        },
+        {
+          "word": "or",
+          "startMs": 7312,
+          "endMs": 7462
+        },
+        {
+          "word": "perished",
+          "startMs": 7462,
+          "endMs": 8062
+        },
+        {
+          "word": "in",
+          "startMs": 8062,
+          "endMs": 8212
+        },
+        {
+          "word": "nuclear",
+          "startMs": 8212,
+          "endMs": 8737
+        },
+        {
+          "word": "fire.",
+          "startMs": 8737,
+          "endMs": 9112
+        }
+      ]
     },
     {
       "id": "scene-06",
@@ -87,8 +862,145 @@
           "weight": 1
         }
       ],
-      "durationMs": 14012,
-      "audioFilename": "scene-06.mp3"
+      "durationMs": 14348,
+      "audioFilename": "scene-06.mp3",
+      "wordTimings": [
+        {
+          "word": "The",
+          "startMs": 100,
+          "endMs": 412
+        },
+        {
+          "word": "toll",
+          "startMs": 412,
+          "endMs": 829
+        },
+        {
+          "word": "was",
+          "startMs": 829,
+          "endMs": 1141
+        },
+        {
+          "word": "staggering.",
+          "startMs": 1141,
+          "endMs": 2287
+        },
+        {
+          "word": "Over",
+          "startMs": 2237,
+          "endMs": 2623
+        },
+        {
+          "word": "sixty",
+          "startMs": 2623,
+          "endMs": 3106
+        },
+        {
+          "word": "million",
+          "startMs": 3106,
+          "endMs": 3781
+        },
+        {
+          "word": "casualties",
+          "startMs": 3781,
+          "endMs": 4747
+        },
+        {
+          "word": "worldwide.",
+          "startMs": 4747,
+          "endMs": 5712
+        },
+        {
+          "word": "The",
+          "startMs": 5712,
+          "endMs": 5978
+        },
+        {
+          "word": "economic",
+          "startMs": 5978,
+          "endMs": 6687
+        },
+        {
+          "word": "cost",
+          "startMs": 6687,
+          "endMs": 7042
+        },
+        {
+          "word": "exceeded",
+          "startMs": 7042,
+          "endMs": 7751
+        },
+        {
+          "word": "four",
+          "startMs": 7751,
+          "endMs": 8106
+        },
+        {
+          "word": "trillion",
+          "startMs": 8106,
+          "endMs": 8815
+        },
+        {
+          "word": "dollars.",
+          "startMs": 8815,
+          "endMs": 9524
+        },
+        {
+          "word": "And",
+          "startMs": 9525,
+          "endMs": 9742
+        },
+        {
+          "word": "more",
+          "startMs": 9742,
+          "endMs": 10032
+        },
+        {
+          "word": "than",
+          "startMs": 10032,
+          "endMs": 10322
+        },
+        {
+          "word": "seventy",
+          "startMs": 10322,
+          "endMs": 10829
+        },
+        {
+          "word": "million",
+          "startMs": 10829,
+          "endMs": 11336
+        },
+        {
+          "word": "people",
+          "startMs": 11336,
+          "endMs": 11771
+        },
+        {
+          "word": "were",
+          "startMs": 11771,
+          "endMs": 12061
+        },
+        {
+          "word": "displaced",
+          "startMs": 12061,
+          "endMs": 12713
+        },
+        {
+          "word": "from",
+          "startMs": 12713,
+          "endMs": 13002
+        },
+        {
+          "word": "their",
+          "startMs": 13002,
+          "endMs": 13365
+        },
+        {
+          "word": "homes.",
+          "startMs": 13365,
+          "endMs": 13800
+        }
+      ]
     },
     {
       "id": "scene-07",
@@ -101,8 +1013,155 @@
           "weight": 1
         }
       ],
-      "durationMs": 14516,
-      "audioFilename": "scene-07.mp3"
+      "durationMs": 14036,
+      "audioFilename": "scene-07.mp3",
+      "wordTimings": [
+        {
+          "word": "Among",
+          "startMs": 100,
+          "endMs": 484
+        },
+        {
+          "word": "history's",
+          "startMs": 484,
+          "endMs": 1177
+        },
+        {
+          "word": "deadliest",
+          "startMs": 1177,
+          "endMs": 1869
+        },
+        {
+          "word": "conflicts,",
+          "startMs": 1869,
+          "endMs": 2638
+        },
+        {
+          "word": "the",
+          "startMs": 2638,
+          "endMs": 2869
+        },
+        {
+          "word": "Second",
+          "startMs": 2869,
+          "endMs": 3331
+        },
+        {
+          "word": "World",
+          "startMs": 3331,
+          "endMs": 3715
+        },
+        {
+          "word": "War",
+          "startMs": 3715,
+          "endMs": 3946
+        },
+        {
+          "word": "stands",
+          "startMs": 3946,
+          "endMs": 4408
+        },
+        {
+          "word": "alone",
+          "startMs": 4408,
+          "endMs": 4793
+        },
+        {
+          "word": "with",
+          "startMs": 4793,
+          "endMs": 5100
+        },
+        {
+          "word": "seventy",
+          "startMs": 5100,
+          "endMs": 5639
+        },
+        {
+          "word": "million",
+          "startMs": 5639,
+          "endMs": 6177
+        },
+        {
+          "word": "dead.",
+          "startMs": 6177,
+          "endMs": 6562
+        },
+        {
+          "word": "The",
+          "startMs": 6512,
+          "endMs": 6777
+        },
+        {
+          "word": "Mongol",
+          "startMs": 6777,
+          "endMs": 7308
+        },
+        {
+          "word": "conquests",
+          "startMs": 7308,
+          "endMs": 8105
+        },
+        {
+          "word": "claimed",
+          "startMs": 8105,
+          "endMs": 8724
+        },
+        {
+          "word": "forty",
+          "startMs": 8724,
+          "endMs": 9167
+        },
+        {
+          "word": "million.",
+          "startMs": 9167,
+          "endMs": 9874
+        },
+        {
+          "word": "And",
+          "startMs": 9875,
+          "endMs": 10132
+        },
+        {
+          "word": "the",
+          "startMs": 10132,
+          "endMs": 10389
+        },
+        {
+          "word": "First",
+          "startMs": 10389,
+          "endMs": 10817
+        },
+        {
+          "word": "World",
+          "startMs": 10817,
+          "endMs": 11246
+        },
+        {
+          "word": "War",
+          "startMs": 11246,
+          "endMs": 11503
+        },
+        {
+          "word": "took",
+          "startMs": 11503,
+          "endMs": 11846
+        },
+        {
+          "word": "twenty",
+          "startMs": 11846,
+          "endMs": 12360
+        },
+        {
+          "word": "million",
+          "startMs": 12360,
+          "endMs": 12960
+        },
+        {
+          "word": "lives.",
+          "startMs": 12960,
+          "endMs": 13475
+        }
+      ]
     },
     {
       "id": "scene-08",
@@ -115,8 +1174,145 @@
           "weight": 1
         }
       ],
-      "durationMs": 13100,
-      "audioFilename": "scene-08.mp3"
+      "durationMs": 12092,
+      "audioFilename": "scene-08.mp3",
+      "wordTimings": [
+        {
+          "word": "On",
+          "startMs": 100,
+          "endMs": 274
+        },
+        {
+          "word": "July",
+          "startMs": 274,
+          "endMs": 622
+        },
+        {
+          "word": "sixteenth,",
+          "startMs": 622,
+          "endMs": 1493
+        },
+        {
+          "word": "nineteen",
+          "startMs": 1493,
+          "endMs": 2190
+        },
+        {
+          "word": "sixty",
+          "startMs": 2190,
+          "endMs": 2625
+        },
+        {
+          "word": "nine,",
+          "startMs": 2625,
+          "endMs": 3061
+        },
+        {
+          "word": "humanity",
+          "startMs": 3061,
+          "endMs": 3758
+        },
+        {
+          "word": "took",
+          "startMs": 3758,
+          "endMs": 4106
+        },
+        {
+          "word": "its",
+          "startMs": 4106,
+          "endMs": 4367
+        },
+        {
+          "word": "greatest",
+          "startMs": 4367,
+          "endMs": 5064
+        },
+        {
+          "word": "leap.",
+          "startMs": 5064,
+          "endMs": 5500
+        },
+        {
+          "word": "The",
+          "startMs": 5450,
+          "endMs": 5678
+        },
+        {
+          "word": "Apollo",
+          "startMs": 5678,
+          "endMs": 6134
+        },
+        {
+          "word": "eleven",
+          "startMs": 6134,
+          "endMs": 6591
+        },
+        {
+          "word": "mission",
+          "startMs": 6591,
+          "endMs": 7124
+        },
+        {
+          "word": "lifted",
+          "startMs": 7124,
+          "endMs": 7580
+        },
+        {
+          "word": "off",
+          "startMs": 7580,
+          "endMs": 7808
+        },
+        {
+          "word": "from",
+          "startMs": 7808,
+          "endMs": 8113
+        },
+        {
+          "word": "Kennedy",
+          "startMs": 8113,
+          "endMs": 8645
+        },
+        {
+          "word": "Space",
+          "startMs": 8645,
+          "endMs": 9026
+        },
+        {
+          "word": "Center,",
+          "startMs": 9026,
+          "endMs": 9559
+        },
+        {
+          "word": "carrying",
+          "startMs": 9559,
+          "endMs": 10167
+        },
+        {
+          "word": "three",
+          "startMs": 10167,
+          "endMs": 10548
+        },
+        {
+          "word": "men",
+          "startMs": 10548,
+          "endMs": 10776
+        },
+        {
+          "word": "to",
+          "startMs": 10776,
+          "endMs": 10928
+        },
+        {
+          "word": "the",
+          "startMs": 10928,
+          "endMs": 11157
+        },
+        {
+          "word": "moon.",
+          "startMs": 11157,
+          "endMs": 11537
+        }
+      ]
     },
     {
       "id": "scene-09",
@@ -129,8 +1325,120 @@
           "weight": 1
         }
       ],
-      "durationMs": 11900,
-      "audioFilename": "scene-09.mp3"
+      "durationMs": 11180,
+      "audioFilename": "scene-09.mp3",
+      "wordTimings": [
+        {
+          "word": "Fast",
+          "startMs": 100,
+          "endMs": 450
+        },
+        {
+          "word": "forward",
+          "startMs": 450,
+          "endMs": 1065
+        },
+        {
+          "word": "a",
+          "startMs": 1065,
+          "endMs": 1152
+        },
+        {
+          "word": "century,",
+          "startMs": 1152,
+          "endMs": 1854
+        },
+        {
+          "word": "and",
+          "startMs": 1854,
+          "endMs": 2117
+        },
+        {
+          "word": "the",
+          "startMs": 2117,
+          "endMs": 2381
+        },
+        {
+          "word": "world",
+          "startMs": 2381,
+          "endMs": 2819
+        },
+        {
+          "word": "had",
+          "startMs": 2819,
+          "endMs": 3082
+        },
+        {
+          "word": "transformed",
+          "startMs": 3082,
+          "endMs": 4047
+        },
+        {
+          "word": "entirely.",
+          "startMs": 4047,
+          "endMs": 4837
+        },
+        {
+          "word": "Sprawling",
+          "startMs": 4787,
+          "endMs": 5536
+        },
+        {
+          "word": "megalopolises",
+          "startMs": 5536,
+          "endMs": 6618
+        },
+        {
+          "word": "dominated",
+          "startMs": 6618,
+          "endMs": 7367
+        },
+        {
+          "word": "the",
+          "startMs": 7367,
+          "endMs": 7616
+        },
+        {
+          "word": "landscape,",
+          "startMs": 7616,
+          "endMs": 8448
+        },
+        {
+          "word": "bathed",
+          "startMs": 8448,
+          "endMs": 8948
+        },
+        {
+          "word": "in",
+          "startMs": 8948,
+          "endMs": 9114
+        },
+        {
+          "word": "the",
+          "startMs": 9114,
+          "endMs": 9364
+        },
+        {
+          "word": "glow",
+          "startMs": 9364,
+          "endMs": 9697
+        },
+        {
+          "word": "of",
+          "startMs": 9697,
+          "endMs": 9863
+        },
+        {
+          "word": "neon",
+          "startMs": 9863,
+          "endMs": 10196
+        },
+        {
+          "word": "rain.",
+          "startMs": 10196,
+          "endMs": 10612
+        }
+      ]
     }
   ],
   "status": "draft"

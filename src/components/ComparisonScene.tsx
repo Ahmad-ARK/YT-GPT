@@ -26,8 +26,8 @@ export const ComparisonScene: React.FC<ComparisonSceneProps> = ({ styleGuide, sc
   const rightPanelProgress = spring({ frame: Math.max(0, frame - 30), fps, config: { damping: 14 } });
 
   // Focus Animations (driven by speaker words)
-  const leftTriggerFrame = getTriggerFrame(scene.narration, left.triggerWord, totalFrames, 15);
-  const rightTriggerFrame = getTriggerFrame(scene.narration, right.triggerWord, totalFrames, totalFrames / 2);
+  const leftTriggerFrame = getTriggerFrame(scene, left.triggerWord, totalFrames, 15);
+  const rightTriggerFrame = getTriggerFrame(scene, right.triggerWord, totalFrames, totalFrames / 2);
 
   // Springs for focus state transitions
   const leftFocusIn = spring({ frame: Math.max(0, frame - leftTriggerFrame), fps, config: { damping: 14 } });
@@ -95,7 +95,7 @@ export const ComparisonScene: React.FC<ComparisonSceneProps> = ({ styleGuide, sc
            {left.points && left.points.length > 0 && (
              <div style={{ display: "flex", flexDirection: "column", gap: "15px", alignItems: "flex-start" }}>
                {left.points.map((pt: any, idx: number) => {
-                 const triggerFrame = getTriggerFrame(scene.narration, pt.triggerWord, totalFrames, 45 + idx * 20);
+                 const triggerFrame = getTriggerFrame(scene, pt.triggerWord, totalFrames, 45 + idx * 20);
                  const ptProgress = spring({ frame: Math.max(0, frame - triggerFrame), fps, config: { damping: 12 } });
                  
                  return (
@@ -137,7 +137,7 @@ export const ComparisonScene: React.FC<ComparisonSceneProps> = ({ styleGuide, sc
            {right.points && right.points.length > 0 && (
              <div style={{ display: "flex", flexDirection: "column", gap: "15px", alignItems: "flex-start" }}>
                {right.points.map((pt: any, idx: number) => {
-                 const triggerFrame = getTriggerFrame(scene.narration, pt.triggerWord, totalFrames, 90 + idx * 20);
+                 const triggerFrame = getTriggerFrame(scene, pt.triggerWord, totalFrames, 90 + idx * 20);
                  const ptProgress = spring({ frame: Math.max(0, frame - triggerFrame), fps, config: { damping: 12 } });
                  
                  return (

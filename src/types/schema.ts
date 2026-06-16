@@ -97,7 +97,15 @@ export type StyleGuide = {
   layout: {
     safeMarginPx: number;
     grid?: { columns: number; gutterPx: number };
+    options: ("centered" | "lowerThird" | "fullBleed" | "splitLeft" | "splitRight")[];
   };
+
+  chapterPalettes?: {
+    bg: string;
+    surface: string;
+    primary: string;
+    accent: string;
+  }[];
 
   audio?: { musicBed?: string; sfxPack?: string };
 

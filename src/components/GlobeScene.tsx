@@ -89,7 +89,7 @@ export const GlobeScene: React.FC<GlobeSceneProps> = ({ styleGuide, scene, durat
 
         {/* Dynamic Curved Connections (flight paths/routes) */}
         {directive.connections?.map((conn: any, i: number) => {
-          const triggerFrame = getTriggerFrame(scene.narration, conn.triggerWord, totalFrames, i * 30);
+          const triggerFrame = getTriggerFrame(scene, conn.triggerWord, totalFrames, i * 30);
           // If frame < triggerFrame, progress = 0
           const progress = spring({ frame: Math.max(0, frame - triggerFrame), fps, config: { damping: 40, stiffness: 60 } });
           if (progress === 0) return null;
@@ -124,7 +124,7 @@ export const GlobeScene: React.FC<GlobeSceneProps> = ({ styleGuide, scene, durat
       {/* Markers / Pins */}
       <div style={{ position: "absolute", width: "100%", height: "100%", pointerEvents: "none" }}>
         {locations.map((loc: any, idx: number) => {
-          const triggerFrame = getTriggerFrame(scene.narration, loc.triggerWord, totalFrames, idx * 30);
+          const triggerFrame = getTriggerFrame(scene, loc.triggerWord, totalFrames, idx * 30);
           const progress = spring({ frame: Math.max(0, frame - triggerFrame), fps, config: { damping: 12 } });
 
           // Project coordinate

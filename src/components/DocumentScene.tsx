@@ -77,7 +77,7 @@ export const DocumentScene: React.FC<DocumentSceneProps> = ({ styleGuide, scene,
       if (idx > 0) parts.push(<span key={`pre-${i}`}>{remaining.substring(0, idx)}</span>);
 
       // Trigger animation
-      const trigFrame = getTriggerFrame(scene.narration, h.triggerWord, totalFrames, 60 + i * 40);
+      const trigFrame = getTriggerFrame(scene, h.triggerWord, totalFrames, 60 + i * 40);
       const progress = interpolate(frame - trigFrame, [0, 25], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
       parts.push(

@@ -25,10 +25,13 @@
   "dependencies": {
     "@google/genai": "^2.8.0",
     "@remotion/cli": "^4.0.476",
+    "@remotion/google-fonts": "^4.0.477",
     "d3": "^7.9.0",
     "dotenv": "^17.4.2",
     "get-audio-duration": "^4.0.1",
     "google-tts-api": "^2.0.2",
+    "https-proxy-agent": "^9.1.0",
+    "node-edge-tts": "^1.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "remotion": "^4.0.476"

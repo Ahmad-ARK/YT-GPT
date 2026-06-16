@@ -45,9 +45,10 @@ REQUIREMENTS:
 6. The 'onScreenText' should be a SHORT headline (3-8 words max), NOT a repeat of the narration.
 7. Do NOT set durationMs — our TTS pipeline will calculate it automatically from the narration audio.
 8. For scenes that require images (like 'cinematicPhoto' or 'archiveMontage'), invent a descriptive filename for the 'imageRef' field (e.g. "roman-colosseum.jpg" or "cyberpunk-city-neon.png"). Our asset pipeline will automatically download or AI-generate these images based on the filename you invent!
-9. Incorporate our newest scene types at least once if they fit the topic: 'countdown', 'infographic', 'ranking', and 'cinematicPhoto'.
+9. Scene selection MUST be driven by narrative need. Do not force scenes like 'ranking' or 'countdown' unless they fit the content perfectly. Vary your scene selection so videos don't become visually monotonous (e.g. don't always open with a titleCard then a map).
 10. Add a 'bgMusic' field to the root of the JSON (e.g. "tense-orchestral.mp3" or "lofi-beats.mp3").
 11. Add an 'sfx' field to specific scenes that need sound effects (e.g. "whoosh.mp3", "heartbeat.mp3", "explosion.mp3"). Only use SFX where it adds impact.
+12. Use the 'style' object on visual directives to specify layouts (e.g. "centered", "lowerThird", "fullBleed", "splitLeft", "splitRight") and caption treatments to add compositional variety.
 `;
 
   try {

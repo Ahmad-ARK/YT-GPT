@@ -7,26 +7,41 @@
  * @param totalFrames Total frames in the scene
  * @returns The frame number where the word is spoken, or a fallback if not found
  */
-export function getTriggerFrame(narration: string, triggerWord: string | undefined, totalFrames: number, fallbackFrame: number): number {
+export function getTriggerFrame(
+  scene: any, 
+  triggerWord: string | undefined, 
+  totalFrames: number, 
+  fallbackFrame: number,
+  fps: number = 30
+): number {
+  const narration = scene.narration || "";
   if (!triggerWord || !narration) return fallbackFrame;
 
-  // Clean punctuation and convert to lowercase for matching
-  const cleanNarration = narration.toLowerCase().replace(/[.,!?;:()]/g, '');
   const cleanTrigger = triggerWord.toLowerCase().replace(/[.,!?;:()]/g, '');
 
+  // 1. Try real word timings
+  if (scene.wordTimings && scene.wordTimings.length > 0) {
+    const timing = scene.wordTimings.find((t: any) => {
+      const cleanW = t.word.toLowerCase().replace(/[.,!?;:()]/g, '');
+      return cleanW === cleanTrigger || cleanW.includes(cleanTrigger) || cleanTrigger.includes(cleanW);
+    });
+    if (timing) {
+      return Math.floor((timing.startMs / 1000) * fps);
+    }
+  }
+
+  // 2. Fallback estimation
+  const cleanNarration = narration.toLowerCase().replace(/[.,!?;:()]/g, '');
   const words = cleanNarration.split(/\s+/);
   
-  // Find the word index (use the first occurrence)
   const wordIndex = words.findIndex(w => w === cleanTrigger || w.includes(cleanTrigger));
 
   if (wordIndex === -1) {
-    console.warn(`Trigger word "${triggerWord}" not found in narration. Using fallback.`);
+    console.warn(`Trigger word "${triggerWord}" not found in narration or timings. Using fallback.`);
     return fallbackFrame;
   }
 
-  // Calculate percentage through the sentence
+  console.warn(`WordTimings missing for "${triggerWord}". Falling back to estimation.`);
   const percentage = wordIndex / Math.max(1, words.length);
-  
-  // Return the corresponding frame
   return Math.floor(percentage * totalFrames);
 }
